@@ -1,0 +1,35 @@
+/* Media Queries ----------------------------------------------------------- */
+/* Very large screens, above 1440 */
+@media only screen and (min-width: 1441px) {}
+
+/* Medium screens, between */
+@media only screen and (max-width: 1279px) and (min-width: 768px) { }
+
+/* Small screens, below 768 (nav break) */
+@media only screen and (max-width: 767px) { 
+
+.navbar .logo a img{
+	float: none;
+	display: inline;
+}
+.navbar ul li {
+
+}
+.row {
+	width: auto;
+	min-width: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+    .row [class*="column"] {width:auto;}
+    #container {width:100%;} }
+
+/* if needed ... */
+/* Landscape Orientation */
+@media screen and (orientation: landscape) {  }
+
+/* Portrait Orientation */
+@media screen and (orientation: portrait) {  }
+
+/* Touch Detection */
+.touch {  }

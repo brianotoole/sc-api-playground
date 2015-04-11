@@ -1,0 +1,64 @@
+/* Header ----------------------------------------------------------- */
+.navbar {
+	width: 100%;
+	min-height: 60px;
+	display: block;
+	margin: 0;
+	background: black;
+	position: relative;
+	
+	.logo {
+		margin: 0;
+	}
+	
+	.logo a img{
+		float: left;
+		display: inline-block;
+		margin: 0 1% 0 0;
+		padding: 0;
+		width: auto;
+		height: 60px;
+		line-height: 58px;	
+		background: black;
+	}
+	
+}
+
+#main-nav {
+	float: right;
+}
+
+
+
+.navbar ul {
+	display: table;
+	vertical-align: middle;
+	margin: 0;
+	float: none;
+	
+	li {
+		display: table-cell;
+		text-align: center;
+		padding-bottom: 0;
+		margin: 0;
+		height: 60px;
+		line-height: 58px;
+	}
+	
+	a {
+		display: block;
+		padding: 0 16px;
+		white-space: nowrap;
+		color: white;
+		height: 60px;
+		line-height: 58px;
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+
+/* Bottom Header */
+.wrapper.shaded {
+	background-color: $shaded;
+}

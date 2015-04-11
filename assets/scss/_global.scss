@@ -1,0 +1,152 @@
+/* Global styles */
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html, button, input, select, textarea {
+    color: #222;
+}
+
+body { 
+    background: white;
+	color: white;
+    font-family: $body-font;
+    font-weight: normal; 
+    font-style: normal; 
+    font-size: 1em;
+    line-height: 1.4;
+    position: relative; 
+    transition: background .5s linear;
+    -webkit-font-smoothing: antialiased; 
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
+}
+
+/* Chrome Frame prompt */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Image replacement */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+/* Tables -----------------------------------------------------------------*/
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+}
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+
+/* Custom styles -----------------------------------------------------------*/
+
+/* Alerts */
+.alert {
+    background-color: $defaultColor;
+    @include borderRadius($defaultRadius);
+    color: darken($defaultColor, 40%);
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid darken($defaultColor, 10%);
+}
+
+.success {
+    background-color: lighten($successColor, 40%);
+    color: $successColor;
+    border-color: lighten($successColor, 20%);
+
+}
+.warning {
+    background-color: lighten($warningColor, 38%);
+    color: $warningColor;
+    border-color: lighten($warningColor, 30%);
+}
+.error {
+    background-color: lighten($errorColor, 40%);
+    color: $errorColor;
+    border-color: lighten($errorColor, 30%);
+}
+
+.info {
+    background-color: lighten($infoColor, 40%);
+    color: $infoColor;
+    border-color: lighten($infoColor, 30%);
+}
+
+
+/* Positioning */
+.center {
+	text-align: center;
+}
+
+/* Content & Layout */
+#container {
+	background: url('../img/bg.jpg');
+	background-attachment: fixed;
+    background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.one, .three {
+	background: rgba($blue,0.6);
+}
+.two, .four {
+	background: rgba($green,0.6);
+}

@@ -1,0 +1,552 @@
+.reviews {
+	
+	h1 {
+		color: $blue;
+		font-weight: 100;
+		margin-bottom: 0;
+	}
+	.page-title {
+		font-size: 3em;
+		font-weight: 700;
+		margin-top: 0;
+	}
+}
+
+/* filters list */
+.filter-container {
+	
+	ul {
+		margin: 30px 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+		
+		li {
+			display: inline;
+		}
+		
+		li a {
+			padding: 10px;
+			position: relative;
+			z-index: 1;
+			color: $blue;
+			font-weight: 700;
+			display: inline-block;
+			transition: background 0.3s 0.3s, color 0.3s;
+			
+			&:hover {
+				color: white;
+				
+				&::before {
+					transform: scale(1) skew(0);
+					background-color: $blue;
+					
+				}
+			}
+			
+			&::before {
+				content: "";
+				height: 100%;
+				width: 100%;
+				background-color: transparent;
+				z-index: -1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: scale(0.2) skew(-10deg);
+				transition: transform 0.3s, background 0.5s;
+			
+			}
+		}
+		
+		.is-checked {
+			background: $blue;
+			color: white;
+		}
+	}
+	
+}
+
+/* isotope */
+.isotope {
+  transition-property: height, width;
+  
+}
+
+/* clear fix */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.centered { 
+  margin: 30px auto; 
+  max-width: 100%;
+}
+
+.isotope .isotope-item {
+  transition-property: transform, opacity;
+}
+
+.isotope,
+.isotope .isotope-item {
+  height: auto!important;
+  transition-duration: 0.5s;
+}
+ 
+ 
+/* These styles ensure that hidden items will not interfere with interactions. */
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* .review-item */
+.review-item {
+	position: relative;
+	float: left;
+	width: 156px;
+	height: 156px;
+	margin: 5px;
+	padding: 0;
+	font-family: $body-font;
+	overflow: hidden;
+	color: white;
+	opacity: 0.9;
+	
+	a {
+		display: block;
+		height: 100%;
+		cursor: pointer;
+	}
+	
+	&::before {
+		position: absolute;
+		display: block;
+		pointer-events: none;
+		text-align: center;
+		font-family: FontAwesome;
+		font-size: 1.5em;
+		top: 0;
+		left: 0;
+		padding: 7px;
+		color: white;
+		z-index: 1;
+		line-height: 1;
+	}
+	
+	&.photo::before {
+		content: "\f030";
+	}
+	&.social::before {
+		content: "\f109";
+	}
+	&.message::before {
+		content: "\f016";
+	}
+	&.video::before {
+		content: "\f03d";
+		background-color: rgba($blue, 0.8);
+	}
+	
+	.full-content {
+		display: none;
+	}
+}
+
+.review-item.width2 { 
+	width: 322px; 
+}
+.review-item.height2 { 
+	height: 322px; 
+	
+}
+
+.review-item:not(.photo):not(.video) {
+	
+	a {
+		padding: 25px 15px 20px 40px;
+	}
+	
+	h3 {
+		color: white;
+		font-weight: 700;
+		margin-top: 0;
+	}
+	
+	h5 {
+		color: white;
+		font-weight: 700;
+		font-size: 16px;
+		letter-spacing: -0.8px;
+		margin: 0 0 8px;
+		text-transform: lowercase;
+	}
+	
+	p {
+		color: white;
+		margin: 0;
+	}
+}
+
+.review-item.photo, .review-item.video {
+	
+	a {
+		position: relative;
+		width: 156px;
+		height: 156px;
+		overflow: hidden;
+	}
+	
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 100%;
+		width: auto;
+		max-width: none;
+		margin: 0;
+		transform: translate(-50%,-50%);
+		filter: grayscale(100%);
+		transition: all 0.4s;
+		
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}
+
+.review-item.video a {
+	width: 322px;
+	height: 322px;
+}
+
+.review-item.message {
+	background-size: cover;
+}
+
+.isotope > .message:nth-child(4n-3) a { background-color: rgba($green, 0.8); }
+.isotope > .message:nth-child(4n-2) a { background-color: rgba($blue, 0.8); }
+.isotope > .message:nth-child(4n-1) a { background-color: rgba($green, 0.8); }
+.isotope > .message:nth-child(4n) a { background-color: rgba($dark-grey, 0.8); }
+
+.isotope > .social:nth-child(4n-3) { background: $blue; }
+.isotope > .social:nth-child(4n-2) { background: $dark-grey; }
+.isotope > .social:nth-child(4n-1) { background: $green; }
+.isotope > .social:nth-child(4n) { background: $dark-grey; }
+
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+
+#cboxLoadingGraphic {
+	position:absolute;
+	top: 30%;
+	left: 50%;
+	left: calc(50% - 20px);
+	width: 40px;
+	height: 40px;
+	background-color: $blue;
+	animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes rotateplane {
+	0% { 
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	} 50% { 
+	    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	} 100% { 
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+}
+
+#cboxLoadedContent {
+	width: 60% !important;
+	height: 100% !important;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 20%;
+
+	&::-webkit-scrollbar { 
+    	display: none; 
+    }
+}
+
+.full-content {
+	padding: 7% 5%;
+	animation: fade-in 0.4s;
+	
+	img {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	
+	&::-webkit-scrollbar { 
+    	display: none; 
+    }
+    .video-wrapper {
+	    margin-bottom: 30px;
+		background-color: rgba(black, 0.4);
+    }
+    
+    &.centeredY {
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+    }
+    &.social-content {
+	    font-size: 1.7em;
+	    line-height: 1.2;
+    }
+}
+
+@keyframes fade-in {
+	from {opacity: 0;}	
+	to   {opacity: 1;}	
+}
+
+#cboxOverlay {
+	background: $dark-grey;
+	filter: alpha(opacity = 90);
+	opacity: 0.95 !important;
+}
+
+#colorbox {
+	outline: 0;
+	height: auto;
+	overflow: visible !important;
+  
+}
+
+#cboxContent {
+  margin: auto;
+  background: transparent;
+  color: white;
+  
+  p {
+	  color: white;
+	  font-size: 1.3em;
+	  font-weight: 400;
+  }
+  
+}
+
+.cboxIframe {
+  background: transparent;
+}
+
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+#cboxTitle {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: white;
+}
+
+#cboxCurrent {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  color: white;
+}
+
+    
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0;
+}
+
+#cboxSlideshow {
+  position: absolute;
+  top: -20px;
+  right: 90px;
+  color: white;
+}
+
+#cboxPrevious {
+	position: fixed; 
+	top: 50%;
+	top: calc(50% - 29px); 
+	left: 12%;
+	font-size: 20px;
+	border: 2px solid white;
+	border-radius: 50%;
+	line-height: 58px;
+	height: 58px;
+	width: 58px;
+	text-align: center;
+	
+	&::before {
+		content: "";
+		height: 16px;
+		width: 16px;
+		border-top: 2px solid white;
+		border-left: 2px solid white;
+		transform: translate(-30%, -50%) rotate(-45deg);
+	}
+}
+ 
+#cboxNext {
+	position: fixed; 
+	top: 50%;
+	top: calc(50% - 29px); 
+	right: 12%;
+	font-size: 20px;
+	border: 2px solid white;
+	border-radius: 50%;
+	line-height: 58px;
+	height: 58px;
+	width: 58px;
+	text-align: center;
+	
+	&::before {
+		content: "";
+		height: 16px;
+		width: 16px;
+		border-top: 2px solid white;
+		border-right: 2px solid white;
+		transform: translate(-70%, -50%) rotate(45deg);
+	}
+}
+
+#cboxClose {
+    position: fixed;
+    top: 7%;
+    right: 12%;
+    display: block;
+	font-size: 20px;
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 50%;
+	line-height: 55px;
+	height: 58px;
+	width: 58px;
+	text-align: center;
+	
+	&::before {
+		content: "";
+		height: 24px;
+		width: 0;
+		border-right: 2px solid white;
+		transform: translate(-50%, -50%) rotate(45deg);	
+		
+	}
+	
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 24px;
+		width: 0;
+		border-left: 2px solid white;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
+#cboxPrevious, #cboxNext, #cboxClose {
+	transition: all 0.5s;
+	
+	
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: all 0.2s;
+	}
+	
+	&:hover {
+		border-color: $blue;
+		transform: scale(1.1);
+		
+		&::before, &::after {
+			border-color: $blue;
+			
+		}
+		
+	}
+		
+}
+
+.overflowY {
+	overflow: visible !important;
+}
+
+/* responsive tweaks, add to responsive.scss when done */
+@media (max-width: 850px) {
+	
+}	
+@media (max-width: 700px) {
+
+	.filter-container ul li a {
+		padding: 5px 8px;
+	}
+
+	#cboxLoadedContent {
+		width: 90% !important;
+		left: 5%;
+	}
+	
+	#cboxPrevious {
+		border: none;
+		left: 0;
+		width: 35px; 
+	}
+	#cboxNext {
+		border: none;
+		right: 0;
+		width: 35px;
+	}
+	#cboxClose {
+		border: none;
+		top: 0;
+		right: 0;	
+		width: 35px; 
+	}
+}
+@media (max-width: 500px) {
+	.isotope {
+		width: 100% !important;
+	}
+	.full-content.social-content {
+		font-size: 1.2em;
+	}
+	.review-item, .review-item.width2  {
+		width: 100%;
+		width: calc(100% - 10px);
+	}
+	.review-item.photo a, .review-item.video a {
+		width: 100%;
+	}
+	
+	.reviews .page-title {
+		font-size: 1.9em;
+	}
+}

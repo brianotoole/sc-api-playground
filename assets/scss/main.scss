@@ -4,12 +4,6 @@ Author: Brian
 Description: using sass to compile to css/main.css
 */
 
-// Import Normalize
-@import "normalize";
-
-// Mixins
-@import "mixins";
-
 // Global Colors
 $body: #272727;
 $shaded: #555;
@@ -30,11 +24,10 @@ $body-font: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 // Default radius for most elements
 $defaultRadius: 3px;
 
-// Global styles
-@import "global";
-@import "header";
+// Framework / Vendors
+@import "bootstrap";
 
-// Import addtional CSS
-@import "grid";
+// Global styles
+@import "header";
 @import "isotope";
 @import "responsive";

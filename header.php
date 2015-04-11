@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>lets go</title>
+        <title>Let's go</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -23,24 +23,24 @@
     <header>
     
     <!-- Top Level Nav -->
-    <nav id="navbar-main-nav" class="navbar">
-	  <div class="row">
-	    <a class="toggle" href="#"><i class="icon-menu"></i></a>
-	    <h1 class="two columns logo">
-	      <a href="/">
-	        <img src="assets/img/logo.svg" alt="">
-	      </a>
-	    </h1>
-	    <nav class="twelve columns pull_right">
-	      <ul id="main-nav">
-	        <li><a href="/features/"><span>About </span><i class="icon-archive" title="Features"></i></a>
-	        </li>
-	        <li><a href="/features/"><span>Contact </span><i class="icon-archive" title="Features"></i></a>
-	        </li>
-	      </ul>
-	    </nav>
-	  </div>
-	  
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
 	  
 	
     </div>

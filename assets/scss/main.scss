@@ -4,30 +4,19 @@ Author: Brian
 Description: using sass to compile to css/main.css
 */
 
-// Global Colors
+// Colors
 $body: #272727;
-$shaded: #555;
-
 $dark-grey: #2d2d2d;
 $green: #35bbad; //light sea-green
 $blue: #2b61a9; //steel blue
 
-$defaultColor: #E9E9E9;
-$successColor: #5DA423;
-$warningColor: #F89406;
-$errorColor: #C60F13;
-$infoColor: #2BA6CB;
-
 // Typography
 $body-font: "Helvetica Neue", "Helvetica", Arial, sans-serif; 
 
-// Default radius for most elements
-$defaultRadius: 3px;
-
-// Framework / Vendors
+// Vendors
 @import "bootstrap";
-
-// Global styles
-@import "header";
 @import "isotope";
+
+// Layout
+@import "layout";
 @import "responsive";

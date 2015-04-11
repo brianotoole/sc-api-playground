@@ -8,6 +8,13 @@
 /* Small screens, below 768 (nav break) */
 @media only screen and (max-width: 767px) { 
 
+.masthead-brand {
+    float: left;
+}
+.masthead-nav {
+    float: right;
+}
+
 .navbar .logo a img{
 	float: none;
 	display: inline;
@@ -21,10 +28,10 @@
 	margin-left: 0;
 	margin-right: 0;
 }
-    .row [class*="column"] {width:auto;}
-    #container {width:100%;} }
+.row [class*="column"] {width:auto;}
 
-/* if needed ... */
+}
+
 /* Landscape Orientation */
 @media screen and (orientation: landscape) {  }
 

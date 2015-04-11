@@ -82,8 +82,8 @@ $(document).ready( function () {
             });
              
             /* Remove / Add .is-checked when clicked */
-            $('.filter-container ul li a').on('click', function () {
-                $('.filter-container ul li a').removeClass('is-checked');
+            $('ul.filter-container li a').on('click', function () {
+                $('ul.filter-container li a').removeClass('is-checked');
                 $(this).addClass('is-checked');
             });
         

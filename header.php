@@ -31,12 +31,15 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand">Logo</h3>
               <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
+                <ul id="filters" class="nav masthead-nav filter-container">
+  
+						<li><a href="#" data-filter=".video"><i class="fa fa-video-camera"></i> Cat 1</a></li>
+						<li><a href="#" data-filter=".social"><i class="fa fa-laptop"></i> Cat 2</a></li>
+						<li><a href="#" data-filter=".message"><i class="fa fa-file-o"></i> Cat 3</a></li>
+						<li><a href="#" data-filter=".review-item" class="is-checked"><i class="fa fa-th"></i> All</a></li>
+					</ul><!--/#filters-->
                 </ul>
               </nav>
             </div>

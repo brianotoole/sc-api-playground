@@ -5334,40 +5334,35 @@ button.close {
   margin-top: 0; }
 
 /* filters list */
-.filter-container ul {
-  margin: 30px 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center; }
-  .filter-container ul li {
-    display: inline; }
-  .filter-container ul li a {
-    padding: 10px;
-    position: relative;
-    z-index: 1;
-    color: #2b61a9;
-    font-weight: 700;
-    display: inline-block;
-    transition: background 0.3s 0.3s, color 0.3s; }
-    .filter-container ul li a:hover {
-      color: white; }
-      .filter-container ul li a:hover::before {
-        transform: scale(1) skew(0);
-        background-color: #2b61a9; }
-    .filter-container ul li a::before {
-      content: "";
-      height: 100%;
-      width: 100%;
-      background-color: transparent;
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: scale(0.2) skew(-10deg);
-      transition: transform 0.3s, background 0.5s; }
-  .filter-container ul .is-checked {
-    background: #2b61a9;
+.filter-container li {
+  display: inline; }
+.filter-container li a {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  color: #2b61a9;
+  font-weight: 700;
+  display: inline-block;
+  transition: background 0.3s 0.3s, color 0.3s; }
+  .filter-container li a:hover {
     color: white; }
+    .filter-container li a:hover::before {
+      transform: scale(1) skew(0);
+      background-color: #2b61a9; }
+  .filter-container li a::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.2) skew(-10deg);
+    transition: transform 0.3s, background 0.5s; }
+.filter-container .is-checked {
+  background: #2b61a9;
+  color: white; }
 
 /* isotope */
 .isotope {
@@ -5757,7 +5752,7 @@ button.close {
 .overflowY {
   overflow: visible !important; }
 
-/* responsive tweaks, add to responsive.scss when done */
+/* responsive tweaks */
 @media (max-width: 700px) {
   .filter-container ul li a {
     padding: 5px 8px; }

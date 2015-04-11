@@ -14,12 +14,6 @@
 
 /* filters list */
 .filter-container {
-	
-	ul {
-		margin: 30px 0;
-		padding: 0;
-		list-style-type: none;
-		text-align: center;
 		
 		li {
 			display: inline;
@@ -63,14 +57,12 @@
 			background: $blue;
 			color: white;
 		}
-	}
 	
 }
 
 /* isotope */
 .isotope {
   transition-property: height, width;
-  
 }
 
 /* clear fix */
@@ -499,10 +491,8 @@
 	overflow: visible !important;
 }
 
-/* responsive tweaks, add to responsive.scss when done */
-@media (max-width: 850px) {
+/* responsive tweaks */
 	
-}	
 @media (max-width: 700px) {
 
 	.filter-container ul li a {
